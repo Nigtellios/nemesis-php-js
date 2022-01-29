@@ -1,25 +1,33 @@
 {
   "name": "nemesis",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "",
-  "keywords": "front-end",
-  "license": "",
-  "author": "",
+  "main": "index.js",
   "scripts": {
-    "build": "parcel build src/*",
-    "dev": "parcel src/index.html --open -p 2137",
-    "start": "yarn build && yarn dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "serve": "gulp serve",
+    "watch": "gulp watch"
   },
-  "watchreload": {
-    "files": ["**/*.php", "**/*.svg"]
-  },
+  "keywords": [],
+  "author": "Jakub Kowalski",
+  "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-watch-reload": "^1.0.3"
-  },
-  "dependencies": {
-    "normalize": "^0.3.1",
-    "sass": "^1.49.0"
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-image": "^4.4.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "sass": "^1.49.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1"
   }
 }
