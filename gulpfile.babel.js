@@ -3,7 +3,9 @@
 // Plugins
 import gulp from 'gulp'
 import babel from 'gulp-babel'
-import sass from 'gulp-sass'
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
 import uglify from 'gulp-uglify'
 import concat from 'gulp-concat'
 import autoprefixer from 'gulp-autoprefixer'
@@ -117,7 +119,7 @@ function images() {
     .pipe(gulp.dest(config.paths.dist.img));
 }
 
-// Static file managment
+// Static file management
 const staticFiles = () => {
   return gulp.src(config.paths.src.static, {base: './src'})
     .pipe(newer(config.paths.dist.main))
